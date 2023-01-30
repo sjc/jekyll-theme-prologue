@@ -61,4 +61,8 @@ google_analytics:
 
 # The following settings are NECESSARY for the Prologue theme to run:
 theme: jekyll-theme-prologue
-collections: [sections]
+# This is a change to jekyll-theme-prologue
+# Instead of a list of directory names, we produce a map so we can access the collections by name
+collections:
+  home:
+  list:

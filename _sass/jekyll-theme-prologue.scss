@@ -448,6 +448,21 @@
 		}
 	}
 
+	.app-store-button {
+		position: relative;
+		display: inline-block;
+		height: 3.25em;
+		padding: 0;
+		border: 0;
+		margin: 0 0 4px 4px;
+		text-decoration: none;
+		vertical-align: top;
+	}
+
+	.app-store-button img {
+		height: 100%;
+	}
+
 /* Item */
 
 	.item {
@@ -592,6 +607,12 @@
 							width: 1.25em;
 							line-height: 1.75em;
 						}
+					}
+
+					&.scrolly {
+						font-size: 0.8em;
+						padding-left: 2em;
+						padding-right: 2em;
 					}
 
 					&.active {

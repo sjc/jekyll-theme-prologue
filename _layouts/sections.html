@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- comment -%}
+  The directory containing the sections to show should be listed in _config.yml in `collections`
+  and in the frontmatter for the page which selects the `sections` layout as `section: <directory>` 
+{%- endcomment -%}
+{%- assign _sections = site[page.section] | sort: 'order' -%}
+{%- include header.html scrolly_nav=_sections -%}
+<!-- Main -->
+<div id="main">
+  {%- if page.content != "" -%}
+    {%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
+  {%- endif -%}
+  <!-- Sections -->
+  {%- for _section in _sections -%}
+    {%- include section.html title=_section.title photo=_section.cover-photo photo-alt=_section.cover-photo-alt auto-header=_section.auto-header content=_section.content -%}
+  {%- endfor -%}
+</div>
